@@ -1,0 +1,350 @@
+@import "color";
+@import "positions";
+// classi comuni
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+  color: $color-blue;
+  font-family: 'Roboto', sans-serif;
+  cursor: default;
+}
+
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+// classi comuni
+
+// header
+
+nav{
+  background-color: $color-white;
+  @media screen and (min-width: 360px) and (max-width: 850px) {
+    display: none;
+    }
+  .nav-up{
+      height: 5rem;
+      @include fl-row-sp;
+        .up-left{
+            @include row-st-c;
+            ul{
+                list-style: none;
+                display: flex;
+                li{
+                    margin-right: 2.5rem;
+                    @include row-st-c;
+                    span:nth-child(2):hover{
+                        text-decoration: underline;
+                        color: $color-azzure;
+                    }
+                }
+            }
+        }
+        .up-right{
+            height: 100%;
+            width: 30rem;
+            @include row-fe-c ;
+            ul{
+                list-style: none;
+                display: flex;
+                li{
+                    margin-left: 2.5rem;
+                    @include row-st-c;
+                    span:first-child{
+                        color:$color-azzure;
+                        margin-right: 1rem;
+                        font-weight: bolder;
+                    }
+                    span:nth-child(2):hover{
+                        text-decoration: underline;
+                        color: $color-azzure;
+                    }
+
+                }
+            }
+        }
+    }
+    .nav-down{
+        height: 8rem;
+        @include fl-row-sp-c;
+        .down-left{
+            @include row-st-c;
+            img{
+                width: 14rem;
+                height: auto;
+                margin-left: -2rem;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                li{
+                    margin-left: 2.5rem;
+                    @include row-st-c;
+                    span:first-child{
+                        font-size: 1.5rem;
+                    }
+                    span:first-child:hover{
+                        text-decoration: underline;
+                        color: $color-azzure;
+                    }
+                }
+            }
+        }
+        .down-right{
+            background-color: $color-orange;
+            height: 36px ;
+            width: 170px;
+            color: $color-white;
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-radius: 5px;
+            @include col-c-c;
+        }
+        .down-right:hover{
+            opacity: 0.5;
+        }
+    }
+    .scrollnav-container{
+        z-index: 100;
+        width: 100vw;
+        height: 8rem;
+        background-color: $color-white;
+        padding: 0 15px;
+        display: none;
+        .nav-down-two{
+            width: 1200px;
+            height: 8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $color-white;
+            .down-left{
+                @include row-st-c;
+                img{
+                    width: 3rem;
+                    height: auto;
+                }
+                ul{
+                    list-style: none;
+                    display: flex;
+                    li{
+                        margin-left: 2.5rem;
+                        @include row-st-c;
+                        span:first-child{
+                            font-size: 1.5rem;
+                        }
+                        span:first-child:hover{
+                            text-decoration: underline;
+                            color: $color-azzure;
+                        }
+                    }
+                }
+            }
+            .down-right{
+                background-color: $color-orange;
+                height: 36px ;
+                width: 170px;
+                color: $color-white;
+                font-size: 1.4rem;
+                font-weight: 500;
+                border-radius: 5px;
+                @include col-c-c;
+            }
+            .down-right:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+    .sticky{
+        display: inline;
+        position: fixed;
+        top: 0%;
+        // left: 50%;
+        // transform: translate(-50%, 0%);
+    }
+}
+
+
+
+.resp-nav{
+    height: 5rem;
+    display: none;
+    padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 3rem;
+        height: auto;
+    }
+    @media screen and (min-width: 360px) and (max-width: 850px) {
+        display: flex;
+    }
+}
+
+// fine header
+
+// jumbotron home
+
+.jumbotron{
+    width: 100%;
+    .band{
+        width: 100vw;
+        min-height: 100px;
+        background-color: $color-blue;
+        .pippo{
+            min-height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @media screen and (min-width: 360px) and (max-width: 767px) {
+                flex-direction: column;
+            }
+            .band-left{
+                width: 70%;
+                min-height: 100px;
+                color: $color-white;
+                font-size: 1.9rem;
+                @include col-c-c;
+                text-align: center;
+                @media screen and (min-width: 360px) and (max-width: 767px) {
+                    width: 95vw;
+                }
+            }
+            .band-right{
+                width: 200px;
+                height: 40px;
+                background-color: $color-white;
+                border-radius: 5px;
+                font-size: 1.5rem;
+                @include col-c-c;
+                @media screen and (min-width: 360px) and (max-width: 767px) {
+                    background-color: transparent;
+                    color: $color-white;
+                    text-decoration: underline;
+                    font-size: 1.9rem;
+                    width: 100vw;
+                }
+            }
+            .band-right:hover{
+                cursor: pointer;
+                opacity: 0.5;
+            }
+        }
+    }
+    .jumbotroncontainer{
+        width: 100%;
+        height: 695px;
+        background-image: url("https://www.hubspot.com/hubfs/raw_assets/public/_Web%20Team%20Assets/Website/assets/svg/hero.svg");
+        background-repeat: no-repeat;
+        background-position:right top;
+        position: relative;
+        background-color: #FFF4EF;
+      }
+
+      .jumbotroncontainer:before{
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        content: "";
+        width: 30%;
+        height: 10.3rem;
+        background: #7EDFD3;
+        border-top: 3px solid #33475b;
+      }
+}
+
+// fine jumbotron home
+
+// jumbotron prodotto
+.product-details{
+  text-align: center;
+  background-color: $color-background;
+  color: $color-dark-blue;
+  font-size: 18px;
+
+  p{
+    text-align: left;
+    padding-bottom: 2.5rem;
+    font-size: 1.5rem;
+  }
+  .img-h{
+    height: 28rem;
+  }
+  .img-p{
+    height: 55rem;
+  }
+  h4{
+    padding: 4.5rem 0 3.0rem 0;
+    color: $color-dark-blue;
+    font-size:2.5rem;
+    font-weight: bolder;
+  }
+}
+// jumbotron prodotto fine
+
+// footer
+
+.container-footer{
+  width: 120rem;
+  margin: 0 auto;
+  @include fl-row-sp;
+  & > .col{
+    width: 22%;
+    height: 100%;
+  }
+  & > .two{
+    & > ul{
+      list-style: none;
+      & > li:first-child{
+        @include first-childs;
+        color: $color-dark-blue;
+      }
+      & > li{
+        font-size: 1.5rem;
+        color: $color-gray;
+      }
+    }
+  }
+  & > .three{
+    & > ul{
+      list-style: none;
+      & > li{
+        font-size: 1.5rem;
+        color: $color-gray;
+      }
+    }
+    & > ul:first-child{
+      & > li:first-child{
+        @include first-childs;
+        color: $color-dark-blue;
+      }
+    }
+    & > ul:nth-child(2){
+      & > li:first-child{
+        @include first-childs;
+        color: $color-gray;
+      }
+    }
+  }
+  & > .four{
+    & > ul{
+      list-style: none;
+      & > li:first-child{
+        margin-top: 2.5rem;
+      }
+      & > li{
+        font-size: 1.5rem;
+        color: $color-gray;
+        & > span:first-child{
+          color: $color-darkest-gray;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+// fine footer
+
+

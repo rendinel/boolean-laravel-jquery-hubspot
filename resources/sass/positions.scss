@@ -1,0 +1,43 @@
+@mixin fl-row-c{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@mixin first-childs{
+  font-size:2.5rem;
+  font-weight: bolder;
+  margin: 2.5rem 0 2.5rem 0;
+}
+// da qui in poi prima esercizio vecchio
+@mixin fl-row-sp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@mixin fl-row-sp-c{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin row-st-c{
+    display: flex;
+    align-items: center;
+}
+
+@mixin row-fe-c {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@mixin col-c-c{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
