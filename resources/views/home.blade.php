@@ -14,6 +14,7 @@
 
     @include('header')
     @include('jumbotron')
+    @include('sectionone')
     @include('footer')
 
 

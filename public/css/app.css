@@ -257,22 +257,103 @@ nav .sticky {
 }
 .jumbotron .jumbotroncontainer {
   width: 100%;
-  height: 695px;
+  height: 69.5rem;
+  padding-top: 13rem;
   background-image: url("https://www.hubspot.com/hubfs/raw_assets/public/_Web%20Team%20Assets/Website/assets/svg/hero.svg");
   background-repeat: no-repeat;
   background-position: right top;
   position: relative;
   background-color: #FFF4EF;
 }
+@media screen and (min-width: 360px) and (max-width: 1650px) {
+  .jumbotron .jumbotroncontainer {
+    padding-top: 0;
+    background-image: url("");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.jumbotron .jumbotroncontainer .jumbo-txt ul {
+  list-style: none;
+}
+@media screen and (min-width: 360px) and (max-width: 1650px) {
+  .jumbotron .jumbotroncontainer .jumbo-txt ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+.jumbotron .jumbotroncontainer .jumbo-txt ul li:first-child {
+  font-size: 4.5rem;
+  color: #33475B;
+  width: 40rem;
+  font-weight: bolder;
+  margin-bottom: 4.5rem;
+}
+@media screen and (min-width: 360px) and (max-width: 419px) {
+  .jumbotron .jumbotroncontainer .jumbo-txt ul li:first-child {
+    font-size: 3.5rem;
+    width: 80%;
+  }
+}
+.jumbotron .jumbotroncontainer .jumbo-txt ul li:nth-child(2) {
+  font-size: 1.7rem;
+  width: 40rem;
+  line-height: 3rem;
+  font-weight: 50;
+}
+@media screen and (min-width: 360px) and (max-width: 419px) {
+  .jumbotron .jumbotroncontainer .jumbo-txt ul li:nth-child(2) {
+    width: 80%;
+  }
+}
+.jumbotron .jumbotroncontainer .jumbo-txt ul li:nth-child(3) {
+  font-size: 1.5rem;
+  width: 21rem;
+  height: 7.5rem;
+  border-radius: 0.5rem;
+  background-color: #FF7A59;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin: 2.5rem 0;
+}
+.jumbotron .jumbotroncontainer .jumbo-txt ul li:nth-child(4) {
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  width: 18rem;
+}
 .jumbotron .jumbotroncontainer:before {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   content: "";
   width: 30%;
   height: 10.3rem;
   background: #7EDFD3;
   border-top: 3px solid #33475b;
+}
+@media screen and (min-width: 360px) and (max-width: 1650px) {
+  .jumbotron .jumbotroncontainer:before {
+    display: none;
+  }
+}
+
+.section-one {
+  background-color: #F5F8FA;
+  width: 100vw;
+  height: 600px;
+}
+.section-one .square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid red;
 }
 
 .product-details {
