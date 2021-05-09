@@ -72,10 +72,59 @@
 
 <div class="section-one">
 
-    @foreach ($arraysec as $id => $item)
-    <div class="square">
+    <div class="container one-cont">
 
+        <div class="top">
+            <h2>{{$titlesecone}}</h2>
+            <p>{{$txtsecone}}</p>
+            <div>
+                <span class="btn-one">{{$btnone}}</span>
+                <span class="btn-two">{{$btntwo}}</span>
+            </div>
+        </div>
+
+        <div class="bottom">
+            @foreach ($arraysec as $id => $item)
+            <div class="square">
+
+                <div class="card-container">
+
+                    <div class="title-row">
+                        <img src="{{$item['img']}}" alt="">
+                        <h3>{{$item['title']}}</h3>
+                        &#8482;
+                    </div>
+
+                    <p>{{$item['txt']}}</p>
+
+                    <div class="feature-container">
+
+                        <span class="subtitle">{{$item['subtitle']}}</span>
+
+                        <div class="space"></div>
+
+                        <div class="feat-row">
+                            <span class="material-icons">{{$item['icons']}}</span>
+                            <span>{{$item['featuresone']}}</span>
+                        </div>
+                        <div class="feat-row">
+                            <span class="material-icons">{{$item['icons']}}</span>
+                            <span>{{$item['featurestwo']}}</span>
+                        </div>
+                        <div class="feat-row">
+                            <span class="material-icons">{{$item['icons']}}</span>
+                            <span>{{$item['featuresthree']}}</span>
+                        </div>
+                        <div class="btn-feat">
+                            <span>{{$item['btn']}}</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            @endforeach
+        </div>
     </div>
-    @endforeach
 
 </div>

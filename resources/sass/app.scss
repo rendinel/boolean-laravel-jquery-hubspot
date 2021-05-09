@@ -7,7 +7,7 @@
   box-sizing: border-box;
   font-size: 10px;
   color: $color-blue;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   cursor: default;
 }
 
@@ -114,7 +114,7 @@ nav{
         padding: 0 15px;
         display: none;
         .nav-down-two{
-            width: 1200px;
+            max-width: 1200px;
             height: 8rem;
             display: flex;
             justify-content: space-between;
@@ -243,9 +243,6 @@ nav{
         position: relative;
         background-color: #FFF4EF;
         @media screen and (min-width: 360px) and (max-width: 1650px) {
-            // background-image: url("https://www.hubspot.com/hubfs/53/assets/hubspot.com/home/2019/garage.svg");
-            // background-position: bottom right;
-            // background-size: 40%;
             padding-top: 0;
             background-image: url("");
             @include col-c-c;
@@ -317,103 +314,455 @@ nav{
 .section-one{
     background-color: #F5F8FA;
     width: 100vw;
-    height: 600px;
-    .square{
-        width: 50px;
-        height: 50px;
-        border: 1px solid red;
+    min-height: 14rem;
+    .one-cont{
+        .top{
+            width: 100%;
+            min-height: 30rem;
+            @include col-c-c;
+            h2{
+                font-size: 3.2rem;
+                margin-bottom: 5rem;
+            }
+            p{
+                font-size: 1.6rem;
+                line-height: 3rem;
+                width: 68%;
+                margin-bottom: 3rem;
+            }
+            div{
+                display: flex;
+                .btn-one{
+                    background-color: $color-orange;
+                    color: $color-white;
+                    width: 14rem;
+                    height: 3.6rem;
+                    @include col-c-c;
+                    font-size: 1.5rem;
+                    margin-right: 2.5rem;
+                    border-radius: 0.5rem;
+                }
+                .btn-two{
+                    border-radius: 0.5rem;
+                    @include col-c-c;
+                    background-color: $color-white;
+                    color: $color-orange;
+                    font-size: 1.5rem;
+                    height: 3.6rem;
+                    width: 19rem ;
+                    border: 1px solid $color-orange;
+                }
+            }
+        }
+        .bottom{
+            display: flex;
+            flex-wrap: wrap;
+            @media screen and (min-width: 360px) and (max-width: 1200px) {
+               align-items: center;
+               flex-direction: column;
+               flex-wrap: nowrap;
+            }
+            .square{
+                margin: 0 2rem 2rem 0;
+                width: 38.65rem;
+                height: 45rem;
+                background-color: $color-white;
+                border-radius: 0.5rem;
+                @include col-c-c;
+                @media screen and (min-width: 360px) and (max-width: 1200px) {
+                    margin: 1rem 0 1rem 0;
+                }
+                .card-container{
+                    width: 85%;
+                    height: 85%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .title-row{
+                        display: flex;
+                        align-items: center;
+                        font-size: 2.2rem;
+                        img{
+                            width: 24px;
+                            height: 24px;
+                        }
+                        h3{
+                            font-size: 2.5rem;
+                            margin-left: 0.5rem;
+                        }
+                    }
+                    p{
+                        font-size: 1.7rem;
+                        font-weight: 10;
+                        line-height: 2.5rem;
+                    }
+                    .feature-container{
+                        padding: 2rem 0;
+                        height: 55%;
+                        width: 100%;
+                        border-top: 0.5px solid lightgray;
+                        .subtitle{
+                            font-size: 1.7rem;
+                            font-weight: 10;
+                            margin-bottom: 10rem;
+                        }
+                        .space{
+                            width: 100%;
+                            height: 1rem;
+                        }
+                        .feat-row{
+                            display: flex;
+                            align-items: center;
+                            margin: 1rem 0;
+                            span:first-child{
+                                color: $color-orange;
+                            }
+                            span:nth-child(2){
+                                font-size: 1.5rem;
+                            }
+                        }
+                        .btn-feat{
+                            width: 100%;
+                            height: 3.7rem;
+                            background-color: $color-orange;
+                            @include col-c-c;
+                            border-radius: 0.5rem;
+                            margin-top: 3rem;
+                            span{
+                                color: $color-white;
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+
+                }
+            }
+            div:nth-child(3){
+                margin-right: 0;
+            }
+        }
     }
 }
 // sectionone fine
 
-// jumbotron prodotto
-.product-details{
-  text-align: center;
-  background-color: $color-background;
-  color: $color-dark-blue;
-  font-size: 18px;
-
-  p{
-    text-align: left;
-    padding-bottom: 2.5rem;
-    font-size: 1.5rem;
-  }
-  .img-h{
-    height: 28rem;
-  }
-  .img-p{
-    height: 55rem;
-  }
-  h4{
-    padding: 4.5rem 0 3.0rem 0;
-    color: $color-dark-blue;
-    font-size:2.5rem;
-    font-weight: bolder;
-  }
+// sectiontwo
+.section-two{
+    width: 100%;
+    min-height: 90rem;
+    background-color: #00ABB6;
+    @include col-c-c;
+    .cont-sec-two{
+        @include col-c-c;
+        h2{
+            color: $color-white;
+            font-size: 3.5rem;
+            width: 60% ;
+            text-align: center;
+            line-height: 6rem;
+            @media screen and (min-width: 360px) and (max-width: 1200px){
+                margin-top: 5rem;
+                width: 40%;
+            }
+        }
+        p{
+            color: $color-white;
+            font-size: 1.8rem;
+            text-align: center;
+            width: 60%;
+            line-height: 3rem;
+        }
+        .table{
+            min-height: 39rem;
+            margin-top: 10rem;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            @media screen and (min-width: 360px) and (max-width: 1200px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+            div:nth-child(1),div:nth-child(2),div:nth-child(3),div:nth-child(5),div:nth-child(6),div:nth-child(7){
+                border-right: 1px solid white;
+                @media screen and (min-width: 360px) and (max-width: 1200px){
+                    border: none;
+                }
+            }
+            div:nth-child(1),div:nth-child(2),div:nth-child(3),div:nth-child(4){
+                border-bottom: 1px solid white;
+                @media screen and (min-width: 360px) and (max-width: 1200px){
+                    border: none;
+                }
+            }
+            div:nth-child(5){
+                img{
+                    width: 60%;
+                    height: auto;
+                }
+            }
+            .square{
+                width: 27.5rem;
+                height: 19.5rem;
+                @include col-c-c;
+                h4{
+                    font-size: 4.5rem;
+                    margin: 1rem 0;
+                    color: $color-white;
+                }
+                .table-txt{
+                    font-size: 1.8rem;
+                    color: $color-white;
+                }
+            }
+        }
+    }
 }
-// jumbotron prodotto fine
+// sectwo fine
+
+// secthree
+
+.sec-three{
+    min-height: 85rem;
+    background-color: #F5F8FA;
+    width: 100vw;
+    .sec-three-cont{
+        min-height: 85rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .up{
+            width: 100%;
+            min-height: 20rem;
+            display: flex;
+            @media screen and (min-width: 360px) and (max-width: 767px){
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .up-left{
+                width: 40%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @media screen and (min-width: 360px) and (max-width: 767px){
+                    align-items: center;
+                }
+                h2{
+                    font-size: 4.5rem;
+                }
+                p{
+                    font-size: 1.8rem;
+                    width: 32rem;
+                    line-height: 3.6rem;
+                    font-weight: 100;
+                    @media screen and (min-width: 360px) and (max-width: 767px){
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+            .up-right{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                @media screen and (min-width: 501px) and (max-width: 767px){
+                    width: 100%;
+                }
+                @media screen and (min-width: 360px) and (max-width: 501px){
+                    min-height: 80rem;
+                }
+                .square{
+                    width: 25%;
+                    height: 50%;
+                    @include col-c-c;
+                    @media screen and (min-width: 360px) and (max-width: 501px){
+                        width: 50%;
+                        height: 25%;
+                    }
+                    img{
+                        width: 60%;
+                        height: auto;
+                        @media screen and (min-width: 360px) and (max-width: 767px){
+
+                        }
+                    }
+                }
+            }
+        }
+        .down{
+            width: 100%;
+            min-height: 40rem;
+            display: flex;
+            @media screen and (min-width: 360px) and (max-width: 767px){
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .down-left{
+                width: 60%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @media screen and (min-width: 360px) and (max-width: 767px){
+                    order: 2;
+                }
+                h2{
+                    font-size: 3.5rem;
+                    margin-bottom: 1.5rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                    width: 75%;
+                }
+                div{
+                    background-color: $color-orange;
+                    color: $color-white;
+                    @include col-c-c;
+                    border-radius: 0.5rem;
+                    width: 20rem;
+                    height: 7.5rem;
+                    font-size: 1.5rem;
+                    margin: 1.5rem 0;
+                }
+                span{
+                    font-size: 1.5rem;
+                }
+            }
+            .down-right{
+                width: 40%;
+                height: 100%;
+                @include col-c-c;
+                @media screen and (min-width: 360px) and (max-width: 767px){
+                    order: 1;
+                }
+                img{
+                    width: 70%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+// secthreefine
 
 // footer
 
-.container-footer{
-  width: 120rem;
-  margin: 0 auto;
-  @include fl-row-sp;
-  & > .col{
-    width: 22%;
-    height: 100%;
-  }
-  & > .two{
-    & > ul{
-      list-style: none;
-      & > li:first-child{
-        @include first-childs;
-        color: $color-dark-blue;
-      }
-      & > li{
-        font-size: 1.5rem;
-        color: $color-gray;
-      }
-    }
-  }
-  & > .three{
-    & > ul{
-      list-style: none;
-      & > li{
-        font-size: 1.5rem;
-        color: $color-gray;
-      }
-    }
-    & > ul:first-child{
-      & > li:first-child{
-        @include first-childs;
-        color: $color-dark-blue;
-      }
-    }
-    & > ul:nth-child(2){
-      & > li:first-child{
-        @include first-childs;
-        color: $color-gray;
-      }
-    }
-  }
-  & > .four{
-    & > ul{
-      list-style: none;
-      & > li:first-child{
-        margin-top: 2.5rem;
-      }
-      & > li{
-        font-size: 1.5rem;
-        color: $color-gray;
-        & > span:first-child{
-          color: $color-darkest-gray;
-          font-weight: bolder;
+footer{
+    width: 100vw;
+    min-height: 66rem;
+    background-color: $color-blue-footer;
+    .foot-container{
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        padding-top: 5rem;
+        div:first-child,div:nth-child(3),div:nth-child(4),div:nth-child(5){
+            ul{
+                li:first-child{
+                    color: $color-white;
+                    font-size: 1.4rem;
+                    margin: 2rem 0;
+                }
+            }
         }
-      }
+        div:nth-child(5){
+            ul{
+                li:nth-child(4){
+                    color: $color-white;
+                    font-size: 1.4rem;
+                    margin: 2rem 0;
+                }
+            }
+        }
+        div:nth-child(2){
+            padding-top: 6rem;
+            border-right: 1px solid #CBD6E2;
+            height: 70%;
+            margin-right: 5rem;
+            width: calc(20% - 5rem);
+        }
+        .rectangle{
+            width: 20%;
+            height: 100%;
+            ul{
+                list-style: none;
+                li{
+                    color:$color-item-footer;
+                    font-size: 1.2rem;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
     }
-  }
+    .hr-container{
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .hr{
+            border: 1px solid $color-item-footer;
+            flex: 1;
+            height: 1px;
+        }
+        .icons-cont{
+            flex: 1;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .icon{
+                color: $color-item-footer;
+                font-size: 25px;
+            }
+        }
+    }
+    .footend{
+        margin: 0 auto;
+        width: 30rem;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        img{
+            width: 40%;
+            height: auto;
+        }
+        div{
+            color: $color-item-footer;
+            font-size: 1.2rem;
+        }
+        span{
+            display: flex;
+            align-items: center;
+            span{
+                color: $color-white;
+                font-size: 1.4rem;
+                text-decoration: underline;
+            }
+            // span:first-child:after{
+            //     content:" &#32; | &#32; ";
+            // }
+        }
+        .vr{
+            width: 1px;
+            height: 10px;
+            background-color: $color-item-footer;
+            margin: 0 10px;
+        }
+    }
 }
+
+
 // fine footer
 
 
