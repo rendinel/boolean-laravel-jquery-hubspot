@@ -79,7 +79,9 @@
             <p>{{$txtsecone}}</p>
             <div>
                 <span class="btn-one">{{$btnone}}</span>
-                <span class="btn-two">{{$btntwo}}</span>
+                <span class="btn-two">
+                    {{$btntwo}}
+                </span>
             </div>
         </div>
 

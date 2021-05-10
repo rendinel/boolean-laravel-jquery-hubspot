@@ -11,7 +11,7 @@ $jumbo = ['There’s a better way to grow.',
 <div class="jumbotron">
 
     <div class="band">
-        <div class="container pippo">
+        <div class="container band-container">
             <div class="band-left">
                 {{$band}}
             </div>

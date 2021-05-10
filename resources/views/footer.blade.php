@@ -64,6 +64,31 @@ $footer = '[
 
    $arrayfooter = json_decode($footer, true);
 
+   $footerresp = '[
+    {
+        "item1":"Popular Features",
+        "item2":"navigate_next"
+    },
+    {
+        "item1":"Free Tools",
+        "item2":"navigate_next"
+    },
+    {
+        "item1":"Company",
+        "item2":"navigate_next"
+    },
+    {
+        "item1":"Customers",
+        "item2":"navigate_next"
+    },
+    {
+        "item1":"Partners",
+        "item2":"navigate_next"
+    }
+   ]';
+
+   $arrayfooterresp = json_decode($footerresp, true);
+
    $imgfoot = 'https://www.hubspot.com/hubfs/WBZ-1165%20Global%20Nav%20Redesign/Wordmark-White.svg';
    $copyright = 'Copyright © 2021 HubSpot, Inc.';
    $legal = 'Legal Stuff';
@@ -76,6 +101,9 @@ $footer = '[
     'icon fab fa-linkedin-in',
     'icon fab fa-medium-m'
    ];
+
+   $apple = 'https://cdn2.hubspot.net/hubfs/53/app%20store%20high%20res.png';
+   $android = 'https://cdn2.hubspot.net/hubfs/53/google%20play%20high%20res.png';
 @endphp
 
 
@@ -101,6 +129,15 @@ $footer = '[
         @endforeach
     </div>
 
+    <div class="resp-footer">
+        @foreach ($arrayfooterresp as $id => $item)
+            <div class="block">
+                <span>{{$item['item1']}}</span>
+                <span class="arrow material-icons">{{$item['item2']}}</span>
+            </div>
+        @endforeach
+    </div>
+
     <div class=" container hr-container">
         <div class="hr"></div>
         <div class="icons-cont">
@@ -109,6 +146,11 @@ $footer = '[
             @endforeach
         </div>
         <div class="hr"></div>
+    </div>
+
+    <div class="app-cont">
+        <img  src="{{$apple}}">
+        <img src="{{$android}}">
     </div>
 
     <div class="footend">

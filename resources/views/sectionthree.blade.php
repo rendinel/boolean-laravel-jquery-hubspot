@@ -14,7 +14,7 @@ $number = '100,000+';
 $numbertxt = 'customers in over 120 countries growing their businesses with HubSpot';
 
 
-$secthreeimg = 'https://cdn2.hubspot.net/hubfs/53/assets/hubspot.com/_style-guide/sg-module-images/9@2x.png';
+$secthreeimg = 'https://cdn2.hubspot.net/hubfs/53/assets/hubspot.com/_style-guide/sg-module-images/12@2x.png';
 $secthreetitle = 'Start Growing With HubSpot Today';
 $secthreetxt = 'With tools to make every part of your process more human and a support team excited to help you, getting started with inbound has never been easier.';
 $freemium = 'Get started with FREE tools, or get more with our premium software.';

@@ -1,0 +1,162 @@
+@import "color";
+@import "positions";
+
+nav{
+    background-color: $color-white;
+    @media screen and (min-width: 360px) and (max-width: 850px) {
+      display: none;
+      }
+    .nav-up{
+        height: 5rem;
+        @include fl-row-sp;
+          .up-left{
+              @include row-st-c;
+              ul{
+                  list-style: none;
+                  display: flex;
+                  li{
+                      margin-right: 2.5rem;
+                      @include row-st-c;
+                      span:nth-child(2):hover{
+                          text-decoration: underline;
+                          color: $color-azzure;
+                      }
+                  }
+              }
+          }
+          .up-right{
+              height: 100%;
+              width: 30rem;
+              @include row-fe-c ;
+              ul{
+                  list-style: none;
+                  display: flex;
+                  li{
+                      margin-left: 2.5rem;
+                      @include row-st-c;
+                      span:first-child{
+                          color:$color-azzure;
+                          margin-right: 1rem;
+                          font-weight: bolder;
+                      }
+                      span:nth-child(2):hover{
+                          text-decoration: underline;
+                          color: $color-azzure;
+                      }
+
+                  }
+              }
+          }
+      }
+      .nav-down{
+          height: 8rem;
+          @include fl-row-sp-c;
+          .down-left{
+              @include row-st-c;
+              img{
+                  width: 14rem;
+                  height: auto;
+                  margin-left: -2rem;
+              }
+              ul{
+                  list-style: none;
+                  display: flex;
+                  li{
+                      margin-left: 2.5rem;
+                      @include row-st-c;
+                      span:first-child{
+                          font-size: 1.5rem;
+                      }
+                      span:first-child:hover{
+                          text-decoration: underline;
+                          color: $color-azzure;
+                      }
+                  }
+              }
+          }
+          .down-right{
+              background-color: $color-orange;
+              height: 36px ;
+              width: 170px;
+              color: $color-white;
+              font-size: 1.4rem;
+              font-weight: 500;
+              border-radius: 5px;
+              @include col-c-c;
+          }
+          .down-right:hover{
+              opacity: 0.5;
+          }
+      }
+      .scrollnav-container{
+          z-index: 100;
+          width: 100vw;
+          height: 8rem;
+          background-color: $color-white;
+          padding: 0 15px;
+          display: none;
+          .nav-down-two{
+              max-width: 1200px;
+              height: 8rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              background-color: $color-white;
+              .down-left{
+                  @include row-st-c;
+                  img{
+                      width: 3rem;
+                      height: auto;
+                  }
+                  ul{
+                      list-style: none;
+                      display: flex;
+                      li{
+                          margin-left: 2.5rem;
+                          @include row-st-c;
+                          span:first-child{
+                              font-size: 1.5rem;
+                          }
+                          span:first-child:hover{
+                              text-decoration: underline;
+                              color: $color-azzure;
+                          }
+                      }
+                  }
+              }
+              .down-right{
+                  background-color: $color-orange;
+                  height: 36px ;
+                  width: 170px;
+                  color: $color-white;
+                  font-size: 1.4rem;
+                  font-weight: 500;
+                  border-radius: 5px;
+                  @include col-c-c;
+              }
+              .down-right:hover{
+                  opacity: 0.5;
+              }
+          }
+      }
+      .sticky{
+          display: inline;
+          position: fixed;
+          top: 0%;
+      }
+}
+
+.resp-nav{
+    height: 5rem;
+    display: none;
+    padding: 0 16px;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 3rem;
+        height: auto;
+    }
+    @media screen and (min-width: 360px) and (max-width: 850px) {
+        display: flex;
+    }
+}

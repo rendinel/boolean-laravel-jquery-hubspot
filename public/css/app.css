@@ -27,6 +27,11 @@ nav .nav-up {
   flex-direction: row;
   justify-content: space-between;
 }
+@media screen and (min-width: 360px) and (max-width: 1220px) {
+  nav .nav-up {
+    padding: 0 1.6rem;
+  }
+}
 nav .nav-up .up-left {
   display: flex;
   align-items: center;
@@ -43,6 +48,7 @@ nav .nav-up .up-left ul li {
 nav .nav-up .up-left ul li span:nth-child(2):hover {
   text-decoration: underline;
   color: #46BDCF;
+  cursor: pointer;
 }
 nav .nav-up .up-right {
   height: 100%;
@@ -68,6 +74,7 @@ nav .nav-up .up-right ul li span:first-child {
 nav .nav-up .up-right ul li span:nth-child(2):hover {
   text-decoration: underline;
   color: #46BDCF;
+  cursor: pointer;
 }
 nav .nav-down {
   height: 8rem;
@@ -75,6 +82,11 @@ nav .nav-down {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 360px) and (max-width: 1220px) {
+  nav .nav-down {
+    padding: 0 1.6rem;
+  }
 }
 nav .nav-down .down-left {
   display: flex;
@@ -100,6 +112,7 @@ nav .nav-down .down-left ul li span:first-child {
 nav .nav-down .down-left ul li span:first-child:hover {
   text-decoration: underline;
   color: #46BDCF;
+  cursor: pointer;
 }
 nav .nav-down .down-right {
   background-color: #FF7A59;
@@ -116,6 +129,7 @@ nav .nav-down .down-right {
 }
 nav .nav-down .down-right:hover {
   opacity: 0.5;
+  cursor: pointer;
 }
 nav .scrollnav-container {
   z-index: 100;
@@ -204,18 +218,23 @@ nav .sticky {
   min-height: 100px;
   background-color: #33475B;
 }
-.jumbotron .band .pippo {
+.jumbotron .band .band-container {
   min-height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (min-width: 768px) and (max-width: 1220px) {
+  .jumbotron .band .band-container {
+    padding-right: 1.6rem;
+  }
+}
 @media screen and (min-width: 360px) and (max-width: 767px) {
-  .jumbotron .band .pippo {
+  .jumbotron .band .band-container {
     flex-direction: column;
   }
 }
-.jumbotron .band .pippo .band-left {
+.jumbotron .band .band-container .band-left {
   width: 70%;
   min-height: 100px;
   color: #ffffff;
@@ -227,11 +246,11 @@ nav .sticky {
   text-align: center;
 }
 @media screen and (min-width: 360px) and (max-width: 767px) {
-  .jumbotron .band .pippo .band-left {
+  .jumbotron .band .band-container .band-left {
     width: 95vw;
   }
 }
-.jumbotron .band .pippo .band-right {
+.jumbotron .band .band-container .band-right {
   width: 200px;
   height: 40px;
   background-color: #ffffff;
@@ -243,7 +262,7 @@ nav .sticky {
   align-items: center;
 }
 @media screen and (min-width: 360px) and (max-width: 767px) {
-  .jumbotron .band .pippo .band-right {
+  .jumbotron .band .band-container .band-right {
     background-color: transparent;
     color: #ffffff;
     text-decoration: underline;
@@ -251,7 +270,7 @@ nav .sticky {
     width: 100vw;
   }
 }
-.jumbotron .band .pippo .band-right:hover {
+.jumbotron .band .band-container .band-right:hover {
   cursor: pointer;
   opacity: 0.5;
 }
@@ -259,20 +278,28 @@ nav .sticky {
   width: 100%;
   height: 69.5rem;
   padding-top: 13rem;
-  background-image: url("https://www.hubspot.com/hubfs/raw_assets/public/_Web%20Team%20Assets/Website/assets/svg/hero.svg");
-  background-repeat: no-repeat;
-  background-position: right top;
   position: relative;
   background-color: #FFF4EF;
 }
 @media screen and (min-width: 360px) and (max-width: 1650px) {
   .jumbotron .jumbotroncontainer {
     padding-top: 0;
-    background-image: url("");
+    height: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+.jumbotron .jumbotroncontainer .jumbo-txt {
+  height: 100%;
+  background-image: url("https://www.hubspot.com/hubfs/raw_assets/public/_Web%20Team%20Assets/Website/assets/svg/hero.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+@media screen and (min-width: 360px) and (max-width: 1650px) {
+  .jumbotron .jumbotroncontainer .jumbo-txt {
+    background-image: url("");
   }
 }
 .jumbotron .jumbotroncontainer .jumbo-txt ul {
@@ -329,18 +356,37 @@ nav .sticky {
   line-height: 2.4rem;
   width: 18rem;
 }
+.jumbotron .jumbotroncontainer .jumbo-txt ul li:nth-child(3):hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 .jumbotron .jumbotroncontainer:before {
   position: absolute;
   bottom: 0;
   left: 0;
   content: "";
   width: 30%;
-  height: 10.3rem;
+  height: 7.46rem;
   background: #7EDFD3;
-  border-top: 3px solid #33475b;
+  border-top: 2.5px solid #33475b;
 }
 @media screen and (min-width: 360px) and (max-width: 1650px) {
   .jumbotron .jumbotroncontainer:before {
+    display: none;
+  }
+}
+.jumbotron .jumbotroncontainer:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 19%;
+  height: 14rem;
+  background: #00A48D;
+  border-top: 3.5px solid #33475b;
+}
+@media screen and (min-width: 360px) and (max-width: 1650px) {
+  .jumbotron .jumbotroncontainer:after {
     display: none;
   }
 }
@@ -349,6 +395,11 @@ nav .sticky {
   background-color: #F5F8FA;
   width: 100vw;
   min-height: 14rem;
+}
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .section-one {
+    padding-top: 2.5rem;
+  }
 }
 .section-one .one-cont .top {
   width: 100%;
@@ -362,6 +413,14 @@ nav .sticky {
   font-size: 3.2rem;
   margin-bottom: 5rem;
 }
+@media screen and (min-width: 360px) and (max-width: 768px) {
+  .section-one .one-cont .top h2 {
+    font-size: 2.4rem;
+    text-align: center;
+    width: 95vw;
+    margin-bottom: 2.5rem;
+  }
+}
 .section-one .one-cont .top p {
   font-size: 1.6rem;
   line-height: 3rem;
@@ -370,6 +429,11 @@ nav .sticky {
 }
 .section-one .one-cont .top div {
   display: flex;
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .section-one .one-cont .top div {
+    flex-direction: column;
+  }
 }
 .section-one .one-cont .top div .btn-one {
   background-color: #FF7A59;
@@ -384,6 +448,15 @@ nav .sticky {
   margin-right: 2.5rem;
   border-radius: 0.5rem;
 }
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .section-one .one-cont .top div .btn-one {
+    width: 90vw;
+    margin: 0 0 1.5rem 0;
+  }
+}
+.section-one .one-cont .top div .btn-one:hover {
+  opacity: 0.5;
+}
 .section-one .one-cont .top div .btn-two {
   border-radius: 0.5rem;
   display: flex;
@@ -396,6 +469,14 @@ nav .sticky {
   height: 3.6rem;
   width: 19rem;
   border: 1px solid #FF7A59;
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .section-one .one-cont .top div .btn-two {
+    width: 90vw;
+  }
+}
+.section-one .one-cont .top div .btn-two:hover {
+  background-color: rgba(255, 122, 89, 0.1);
 }
 .section-one .one-cont .bottom {
   display: flex;
@@ -418,10 +499,21 @@ nav .sticky {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.section-one .one-cont .bottom .square:hover {
+  transform: scale(1.04);
+  transition: 0.1s ease-in-out;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.16);
 }
 @media screen and (min-width: 360px) and (max-width: 1200px) {
   .section-one .one-cont .bottom .square {
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 410px) {
+  .section-one .one-cont .bottom .square {
+    width: 34rem;
   }
 }
 .section-one .one-cont .bottom .square .card-container {
@@ -486,12 +578,32 @@ nav .sticky {
   border-radius: 0.5rem;
   margin-top: 3rem;
 }
+.section-one .one-cont .bottom .square .card-container .feature-container .btn-feat:hover {
+  opacity: 0.5;
+}
 .section-one .one-cont .bottom .square .card-container .feature-container .btn-feat span {
   color: #ffffff;
   font-size: 1.5rem;
 }
 .section-one .one-cont .bottom div:nth-child(3) {
   margin-right: 0;
+}
+.section-one .one-cont .bottom .square:nth-child(5)::after {
+  content: "NEW";
+  background-color: #00ABB6;
+  color: white;
+  border-radius: 1rem 0.2rem 0.2rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 1rem;
+  right: -0.5rem;
 }
 
 .section-two {
@@ -516,10 +628,18 @@ nav .sticky {
   text-align: center;
   line-height: 6rem;
 }
-@media screen and (min-width: 360px) and (max-width: 1200px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .section-two .cont-sec-two h2 {
     margin-top: 5rem;
-    width: 40%;
+    width: 75vw;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .section-two .cont-sec-two h2 {
+    font-size: 2.4rem;
+    width: 90vw;
+    line-height: 3rem;
+    margin: 2.5rem 0;
   }
 }
 .section-two .cont-sec-two p {
@@ -528,6 +648,16 @@ nav .sticky {
   text-align: center;
   width: 60%;
   line-height: 3rem;
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .section-two .cont-sec-two p {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .section-two .cont-sec-two p {
+    width: 75vw;
+  }
 }
 .section-two .cont-sec-two .table {
   min-height: 39rem;
@@ -543,6 +673,7 @@ nav .sticky {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
+    margin-top: 2.5rem;
   }
 }
 .section-two .cont-sec-two .table div:nth-child(1), .section-two .cont-sec-two .table div:nth-child(2), .section-two .cont-sec-two .table div:nth-child(3), .section-two .cont-sec-two .table div:nth-child(5), .section-two .cont-sec-two .table div:nth-child(6), .section-two .cont-sec-two .table div:nth-child(7) {
@@ -609,7 +740,7 @@ nav .sticky {
 }
 .sec-three .sec-three-cont .up .up-left {
   width: 40%;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -621,6 +752,11 @@ nav .sticky {
 }
 .sec-three .sec-three-cont .up .up-left h2 {
   font-size: 4.5rem;
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .sec-three .sec-three-cont .up .up-left h2 {
+    margin-top: 2.5rem;
+  }
 }
 .sec-three .sec-three-cont .up .up-left p {
   font-size: 1.8rem;
@@ -636,7 +772,7 @@ nav .sticky {
 }
 .sec-three .sec-three-cont .up .up-right {
   width: 60%;
-  height: 100%;
+  height: 20rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -715,8 +851,16 @@ nav .sticky {
   font-size: 1.5rem;
   margin: 1.5rem 0;
 }
+.sec-three .sec-three-cont .down .down-left div:hover {
+  opacity: 0.5;
+}
 .sec-three .sec-three-cont .down .down-left span {
   font-size: 1.5rem;
+}
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .sec-three .sec-three-cont .down .down-left span {
+    margin-bottom: 2.5rem;
+  }
 }
 .sec-three .sec-three-cont .down .down-right {
   width: 40%;
@@ -735,6 +879,13 @@ nav .sticky {
   width: 70%;
   height: auto;
 }
+@media screen and (min-width: 360px) and (max-width: 767px) {
+  .sec-three .sec-three-cont .down .down-right img {
+    height: 25.6rem;
+    width: 21.4rem;
+    margin-bottom: 2.5rem;
+  }
+}
 
 footer {
   width: 100vw;
@@ -743,19 +894,33 @@ footer {
 }
 footer .foot-container {
   height: 100%;
-  width: 100vw;
   display: flex;
   padding-top: 5rem;
+}
+@media screen and (min-width: 360px) and (max-width: 927px) {
+  footer .foot-container {
+    display: none;
+  }
 }
 footer .foot-container div:first-child ul li:first-child, footer .foot-container div:nth-child(3) ul li:first-child, footer .foot-container div:nth-child(4) ul li:first-child, footer .foot-container div:nth-child(5) ul li:first-child {
   color: #ffffff;
   font-size: 1.4rem;
   margin: 2rem 0;
 }
+footer .foot-container div:first-child ul li:first-child:hover, footer .foot-container div:nth-child(3) ul li:first-child:hover, footer .foot-container div:nth-child(4) ul li:first-child:hover, footer .foot-container div:nth-child(5) ul li:first-child:hover {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: default;
+}
 footer .foot-container div:nth-child(5) ul li:nth-child(4) {
   color: #ffffff;
   font-size: 1.4rem;
   margin: 2rem 0;
+}
+footer .foot-container div:nth-child(5) ul li:nth-child(4):hover {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: default;
 }
 footer .foot-container div:nth-child(2) {
   padding-top: 6rem;
@@ -776,16 +941,31 @@ footer .foot-container .rectangle ul li {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+footer .foot-container .rectangle ul li:hover {
+  text-decoration: underline;
+  color: #46BDCF;
+  cursor: pointer;
+}
 footer .hr-container {
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (min-width: 360px) and (max-width: 927px) {
+  footer .hr-container {
+    justify-content: center;
+  }
+}
 footer .hr-container .hr {
   border: 1px solid #CBD6E2;
   flex: 1;
   height: 1px;
+}
+@media screen and (min-width: 360px) and (max-width: 927px) {
+  footer .hr-container .hr {
+    display: none;
+  }
 }
 footer .hr-container .icons-cont {
   flex: 1;
@@ -794,9 +974,67 @@ footer .hr-container .icons-cont {
   align-items: center;
   justify-content: space-around;
 }
+@media screen and (min-width: 360px) and (max-width: 927px) {
+  footer .hr-container .icons-cont {
+    flex: 0.33;
+  }
+}
 footer .hr-container .icons-cont .icon {
   color: #CBD6E2;
   font-size: 25px;
+}
+@media screen and (min-width: 360px) and (max-width: 927px) {
+  footer .hr-container .icons-cont .icon {
+    margin: 0 1.5rem;
+  }
+}
+footer .resp-footer {
+  display: none;
+}
+@media screen and (min-width: 360px) and (max-width: 927px) {
+  footer .resp-footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+footer .resp-footer .block {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6rem;
+  border-bottom: 1px solid #CBD6E2;
+}
+footer .resp-footer .block:hover {
+  cursor: pointer;
+}
+footer .resp-footer .block span {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+footer .resp-footer .block .arrow {
+  font-size: 4rem;
+}
+footer .app-cont {
+  display: none;
+  width: 36rem;
+  height: 6rem;
+  margin: 0 auto;
+}
+footer .app-cont .spacing {
+  width: 1rem;
+}
+footer .app-cont img {
+  width: 45%;
+  height: auto;
+}
+@media screen and (min-width: 360px) and (max-width: 927px) {
+  footer .app-cont {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 4rem;
+  }
 }
 footer .footend {
   margin: 0 auto;
