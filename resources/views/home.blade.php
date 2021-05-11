@@ -18,10 +18,13 @@
     @include('sectiontwo')
     @include('sectionthree')
     @include('footer')
+    @include('chatbot')
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script>
+
+    // navbar on scroll
 
     var headerPosition = $('.scrollnav-container').offset().top;
 
@@ -32,6 +35,38 @@
     } else {
     $('.scrollnav-container').removeClass('sticky');
     }
+    });
+
+    // end navbar on scroll
+
+    // chat toggle
+
+    var on = $('.assistant-on');
+    var off = $('.assistant-off');
+    var chatbot = $('.chatbot')
+
+    $('.fa-comments').click(function() {
+    on.hide();
+    });
+
+    $('.fa-comments').click(function() {
+    chatbot.hide();
+    });
+
+    $('.closetwo').click(function() {
+    chatbot.show();
+    });
+
+    $('.closetwo').click(function() {
+    off.hide();
+    });
+
+    $('.fa-comments').click(function() {
+    off.show();
+    });
+
+    $('.close').click(function() {
+    on.hide();
     });
 
     </script>

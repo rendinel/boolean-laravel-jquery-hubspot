@@ -4,16 +4,21 @@
   justify-content: center;
 }
 
-@mixin first-childs{
-  font-size:2.5rem;
-  font-weight: bolder;
-  margin: 2.5rem 0 2.5rem 0;
+@mixin row-c{
+    display: flex;
+    align-items: center;
 }
-// da qui in poi prima esercizio vecchio
+
 @mixin fl-row-sp{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+@mixin row-c-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @mixin fl-row-sp-c{
@@ -34,6 +39,11 @@
     justify-content: flex-end;
 }
 
+@mixin c{
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin col-c-c{
     display: flex;
     flex-direction: column;
@@ -41,3 +51,15 @@
     align-items: center;
 }
 
+@mixin col-c{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin col-c-end {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
