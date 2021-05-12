@@ -1,0 +1,62 @@
+@mixin underline {
+    text-decoration: underline;
+    color: $color-azzure;
+    cursor: pointer;
+}
+
+@mixin no-underline{
+    text-decoration: none;
+    color: $color-white;
+    cursor: default;
+}
+
+@mixin speech-bubble{
+    position: absolute;
+    border-radius: .4em;
+    top: 5rem;
+    background-color: $color-background-section;
+    z-index: 2;
+    display: none;
+}
+
+@mixin after-speech-bubble{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 2rem solid transparent;
+    border-bottom-color: $color-background-section;
+    border-top: 0;
+    margin-left: -2rem;
+    margin-top: -2rem;
+}
+
+@mixin chatbot{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: $color-chatbot;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    margin-left: 21.5rem;
+    @include col-c-c;
+}
+
+@mixin btn-orange{
+    background-color: $color-orange;
+    color: $color-white;
+    @include col-c-c;
+    border-radius: 0.5rem;
+    &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+    }
+}
+
+@mixin li-footer{
+    color: $color-white;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+}

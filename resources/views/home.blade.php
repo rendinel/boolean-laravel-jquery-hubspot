@@ -12,13 +12,18 @@
   </head>
   <body>
 
-    @include('header')
-    @include('jumbotron')
-    @include('sectionone')
-    @include('sectiontwo')
-    @include('sectionthree')
-    @include('footer')
-    @include('chatbot')
+    <div class="app">
+        @include('header')
+        @include('jumbotron')
+        @include('sectionone')
+        @include('sectiontwo')
+        @include('sectionthree')
+        @include('footer')
+        @include('chatbot')
+    </div>
+
+    @include('hamburger')
+
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -67,6 +72,22 @@
 
     $('.close').click(function() {
     on.hide();
+    });
+    // end chat toggle
+
+    // hamburger toggle
+
+    var hamburgerOn = $('.app')
+    var hamburgerOff = $('.hamburger')
+
+    $('.toggler').click(function() {
+    hamburgerOn.hide();
+    hamburgerOff.show();
+    });
+
+    $('.x-toggle').click(function() {
+    hamburgerOff.hide();
+    hamburgerOn.show();
     });
 
     </script>

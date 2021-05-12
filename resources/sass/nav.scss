@@ -1,6 +1,3 @@
-@import "color";
-@import "positions";
-
 nav{
     background-color: $color-white;
     @media screen and (min-width: 360px) and (max-width: 850px) {
@@ -8,20 +5,51 @@ nav{
       }
     .nav-up{
         height: 5rem;
+        position: relative;
         @include fl-row-sp;
+        @media screen and (min-width: 360px) and (max-width: 1220px) {
+          padding: 0 1.6rem;
+          }
           .up-left{
               @include row-st-c;
               ul{
                   list-style: none;
                   display: flex;
-                  li{
+                  .over-li{
                       margin-right: 2.5rem;
                       @include row-st-c;
+                      &:first-child:hover .speech-bubble {
+                          display: flex;
+                      }
                       span:nth-child(2):hover{
-                          text-decoration: underline;
-                          color: $color-azzure;
+                          @include underline;
+                      }
+                      .speech-bubble {
+                          @include speech-bubble;
+                          width: 10rem;
+                          height: 25rem;
+                          left: 0;
+                          ul{
+                              list-style: none;
+                              width: 100%;
+                              height: 100%;
+                              @include col-sp-st;
+                              li{
+                                  font-size: 1.2rem;
+                                  text-align: left;
+                                  margin-left: 2.5rem;
+                                  &:hover{
+                                      @include underline;
+                                  }
+                              }
+                          }
+                          &::after {
+                              @include after-speech-bubble;
+                              left: 50%;
+                          }
                       }
                   }
+
               }
           }
           .up-right{
@@ -31,28 +59,61 @@ nav{
               ul{
                   list-style: none;
                   display: flex;
-                  li{
+                  .over-li-two{
                       margin-left: 2.5rem;
                       @include row-st-c;
+                      &:nth-child(3):hover .speech-bubble-two {
+                          display: flex;
+                      }
                       span:first-child{
                           color:$color-azzure;
                           margin-right: 1rem;
                           font-weight: bolder;
                       }
                       span:nth-child(2):hover{
-                          text-decoration: underline;
-                          color: $color-azzure;
+                          @include underline;
                       }
-
+                      .speech-bubble-two {
+                          @include speech-bubble;
+                          width: 15rem;
+                          height: 20rem;
+                          right: 0;
+                          ul{
+                              list-style: none;
+                              width: 100%;
+                              height: 100%;
+                              @include col-sp-st;
+                              li{
+                                  font-size: 1.2rem;
+                                  text-align: left;
+                                  margin-left: 3rem;
+                                  &:hover{
+                                      @include underline;
+                                  }
+                              }
+                          }
+                          &:after {
+                              left: 75%;
+                              @include after-speech-bubble;
+                          }
+                      }
                   }
               }
           }
+
       }
+
       .nav-down{
           height: 8rem;
           @include fl-row-sp-c;
+          position: relative;
+          @media screen and (min-width: 360px) and (max-width: 1220px) {
+              padding: 0 1.6rem;
+              }
           .down-left{
+              position: relative;
               @include row-st-c;
+              height: 100%;
               img{
                   width: 14rem;
                   height: auto;
@@ -61,48 +122,207 @@ nav{
               ul{
                   list-style: none;
                   display: flex;
+                  height: 100%;
                   li{
                       margin-left: 2.5rem;
                       @include row-st-c;
+                      height: 100%;
                       span:first-child{
                           font-size: 1.5rem;
                       }
                       span:first-child:hover{
-                          text-decoration: underline;
-                          color: $color-azzure;
+                          @include underline;
                       }
+                      .dropdown{
+                          position: absolute;
+                          width: 120rem;
+                          height: 35rem;
+                          top: 7.8rem;
+                          left: 0;
+                          display: none;
+                          z-index: 2;
+                          @media screen and (min-width: 851px) and (max-width: 1220px) {
+                              width: 95vw;
+                          }
+                          .drop-left{
+                              flex: 1;
+                              height: 100%;
+                              background-color: $color-background-section;
+                              div{
+                                  width: 100%;
+                                  height: 35%;
+                                  h4{
+                                      font-size: 2rem;
+                                      margin-left: 2rem;
+                                      margin-top: 2rem;
+                                  }
+                                  .txt{
+                                      width: 70%;
+                                      font-size: 1.6rem;
+                                      margin-left: 2rem;
+                                      color: $color-azzure;
+                                      &:hover{
+                                          @include underline;
+                                      }
+                                  }
+                              }
+                          }
+                          .drop-right{
+                              flex: 5;
+                              height: 100%;
+                              background-color: $color-white;
+                              .drop-right-up{
+                                  height: 80%;
+                                  width: 100%;
+                                  @include wr-c;
+                                  .square{
+                                      width: 33%;
+                                      height: 40%;
+                                      display: flex;
+                                      border-radius: 0.5rem;
+                                      &:hover{
+                                          box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.16);
+                                      }
+                                      .left{
+                                          width: 15%;
+                                          height: 100%;
+                                          @include col-fe-fs;
+                                          padding-top: 1.5rem;
+                                          img{
+                                              width: 50%;
+                                              height: auto;
+                                          }
+                                      }
+                                      .right{
+                                          width: 85%;
+                                          height: 100%;
+                                          padding-left: 1.5rem;
+                                          padding-top: 1.5rem;
+                                          h5{
+                                              font-size: 2rem;
+                                          }
+                                          div{
+                                              font-size: 1.5rem;
+                                          }
+                                          span{
+                                              font-size: 1.5rem;
+                                              color: $color-azzure;
+                                              &:hover{
+                                                  @include underline;
+                                              }
+                                          }
+
+                                      }
+                                  }
+                              }
+                              .drop-right-down{
+                                  height: 20%;
+                                  width: 100%;
+                                  @include row-c-c;
+                                  border-top: 0.05rem solid $color-item-footer;
+                                  h5{
+                                      font-size: 2rem;
+                                  }
+                                  div{
+                                      font-size: 2rem;
+                                      margin: 0 1rem;
+                                  }
+                                  span{
+                                      font-size: 2rem;
+                                      color: $color-azzure;
+                                      &:hover{
+                                          @include underline;
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                      .dropdown-two{
+                          position: absolute;
+                          width: 73rem;
+                          height: 38rem;
+                          background-color: $color-white;
+                          top: 7.8rem;
+                          left: 16.6%;
+                          display: none;
+                          z-index: 2;
+                          flex-direction: column;
+                          flex-wrap: wrap;
+                          align-items: center;
+                          .square{
+                              width: 40%;
+                              height: 30%;
+                              display: flex;
+                              .left{
+                                  width: 15%;
+                                  height: 100%;
+                                  padding-top: 1.5rem;
+                                  display: flex;
+                                  flex-direction: column;
+                                  align-items: center;
+                                  .img-square{
+                                      width: 30px;
+                                      height: 30px;
+                                      background-color: $color-item-footer;
+                                      @include col-c-c;
+                                      img{
+                                          width: 60%;
+                                          height: auto;
+                                          margin-left: 0.5rem;
+                                      }
+                                  }
+                              }
+                              .right{
+                                  width: 85%;
+                                  height: 100%;
+                                  padding-top: 1.5rem;
+                                  padding-left: 1.5rem;
+                                  h5{
+                                      font-size: 2rem;
+                                      font-weight: bolder;
+                                  }
+                                  div{
+                                      font-size: 1.5rem;
+                                      margin-top: 1.5rem;
+                                      &:hover{
+                                          @include underline;
+                                      }
+                                  }
+                              }
+                          }
+                          .square:first-child{
+                              height: 60%;
+                          }
+                      }
+                  }
+                  li:first-child:hover .dropdown,li:nth-child(3):hover .dropdown-two{
+                      display: flex;
                   }
               }
           }
           .down-right{
-              background-color: $color-orange;
-              height: 36px ;
-              width: 170px;
-              color: $color-white;
+              @include btn-orange;
+              height: 3.6rem ;
+              width: 17rem;
               font-size: 1.4rem;
               font-weight: 500;
-              border-radius: 5px;
-              @include col-c-c;
-          }
-          .down-right:hover{
-              opacity: 0.5;
           }
       }
+
       .scrollnav-container{
           z-index: 100;
           width: 100vw;
           height: 8rem;
           background-color: $color-white;
-          padding: 0 15px;
+          padding: 0 1.5rem;
           display: none;
           .nav-down-two{
-              max-width: 1200px;
+              max-width: 120rem;
               height: 8rem;
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              @include fl-row-sp-c;
               background-color: $color-white;
               .down-left{
+                  height: 100%;
                   @include row-st-c;
                   img{
                       width: 3rem;
@@ -111,9 +331,17 @@ nav{
                   ul{
                       list-style: none;
                       display: flex;
+                      height: 100%;
                       li{
                           margin-left: 2.5rem;
                           @include row-st-c;
+                          height: 100%;
+                          &:first-child:hover .dropdown{
+                              display: flex;
+                          }
+                          &:nth-child(3):hover .dropdown-two{
+                              display: flex;
+                          }
                           span:first-child{
                               font-size: 1.5rem;
                           }
@@ -121,21 +349,181 @@ nav{
                               text-decoration: underline;
                               color: $color-azzure;
                           }
+                          .dropdown{
+                              position: absolute;
+                              top: 0%;
+                              margin: 0 auto;
+                              max-width: 120rem;
+                              height: 35rem;
+                              top: 7.8rem;
+                              left: 36rem;
+                              left: 18.75%;
+                              display: none;
+                              z-index: 2;
+                              @media screen and (min-width: 851px) and (max-width: 1650px) {
+                                  width: 95vw;
+                                  left: 2.5%;
+                              }
+                              .drop-left{
+                                  flex: 1;
+                                  height: 100%;
+                                  background-color: $color-background-section;
+                                  div{
+                                      width: 100%;
+                                      height: 35%;
+                                      h4{
+                                          font-size: 2rem;
+                                          margin-left: 2rem;
+                                          margin-top: 2rem;
+                                      }
+                                      .txt{
+                                          width: 70%;
+                                          font-size: 1.6rem;
+                                          margin-left: 2rem;
+                                          color: $color-azzure;
+                                          &:hover{
+                                              @include underline;
+                                          }
+                                      }
+                                  }
+                              }
+                              .drop-right{
+                                  flex: 5;
+                                  height: 100%;
+                                  background-color: $color-white;
+                                  .drop-right-up{
+                                      height: 80%;
+                                      width: 100%;
+                                      @include wr-c;
+                                      .square{
+                                          width: 33%;
+                                          height: 40%;
+                                          display: flex;
+                                          border-radius: 0.5rem;
+                                          &:hover{
+                                              box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.16);
+                                          }
+                                          .left{
+                                              width: 15%;
+                                              height: 100%;
+                                              @include col-fe-fs;
+                                              padding-top: 1.5rem;
+                                              img{
+                                                  width: 50%;
+                                                  height: auto;
+                                              }
+                                          }
+                                          .right{
+                                              width: 85%;
+                                              height: 100%;
+                                              padding-left: 1.5rem;
+                                              padding-top: 1.5rem;
+                                              h5{
+                                                  font-size: 2rem;
+                                              }
+                                              div{
+                                                  font-size: 1.5rem;
+                                              }
+                                              span{
+                                                  font-size: 1.5rem;
+                                                  color: $color-azzure;
+                                                  &:hover{
+                                                      @include underline;
+                                                  }
+                                              }
+
+                                          }
+                                      }
+                                  }
+                                  .drop-right-down{
+                                      height: 20%;
+                                      width: 100%;
+                                      @include row-c-c;
+                                      border-top: 0.05rem solid $color-item-footer;
+                                      h5{
+                                          font-size: 2rem;
+                                      }
+                                      div{
+                                          font-size: 2rem;
+                                          margin: 0 1rem;
+                                      }
+                                      span{
+                                          font-size: 2rem;
+                                          color: $color-azzure;
+                                          &:hover{
+                                              @include underline;
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                          .dropdown-two{
+                              position: absolute;
+                              width: 73rem;
+                              height: 38rem;
+                              background-color: $color-white;
+                              top: 7.8rem;
+                              left: 22%;
+                              display: none;
+                              z-index: 2;
+                              flex-direction: column;
+                              flex-wrap: wrap;
+                              align-items: center;
+                              @media screen and (min-width: 851px) and (max-width: 1200px) {
+                                  left: 10%;
+                              }
+                              .square{
+                                  width: 40%;
+                                  height: 30%;
+                                  display: flex;
+                                  .left{
+                                      width: 15%;
+                                      height: 100%;
+                                      padding-top: 1.5rem;
+                                      @include col-c;
+                                      .img-square{
+                                          width: 3rem;
+                                          height: 3rem;
+                                          background-color: $color-item-footer;
+                                          @include col-c-c;
+                                          img{
+                                              width: 60%;
+                                              height: auto;
+                                              margin-left: 0.5rem;
+                                          }
+                                      }
+                                  }
+                                  .right{
+                                      width: 85%;
+                                      height: 100%;
+                                      padding-top: 1.5rem;
+                                      padding-left: 1.5rem;
+                                      h5{
+                                          font-size: 2rem;
+                                          font-weight: bolder;
+                                      }
+                                      div{
+                                          font-size: 1.5rem;
+                                          margin-top: 1.5rem;
+                                          &:hover{
+                                              @include underline;
+                                          }
+                                      }
+                                  }
+                              }
+                              .square:first-child{
+                                  height: 60%;
+                              }
+                          }
                       }
                   }
               }
               .down-right{
-                  background-color: $color-orange;
-                  height: 36px ;
-                  width: 170px;
-                  color: $color-white;
+                  @include btn-orange;
+                  height: 3.6rem ;
+                  width: 17rem;
                   font-size: 1.4rem;
                   font-weight: 500;
-                  border-radius: 5px;
-                  @include col-c-c;
-              }
-              .down-right:hover{
-                  opacity: 0.5;
               }
           }
       }
@@ -144,19 +532,19 @@ nav{
           position: fixed;
           top: 0%;
       }
-}
+  }
 
-.resp-nav{
-    height: 5rem;
-    display: none;
-    padding: 0 16px;
-    justify-content: space-between;
-    align-items: center;
-    img{
-        width: 3rem;
-        height: auto;
-    }
-    @media screen and (min-width: 360px) and (max-width: 850px) {
-        display: flex;
-    }
-}
+  .resp-nav{
+      height: 5rem;
+      display: none;
+      padding: 0 1.6rem;
+      img{
+          width: 3rem;
+          height: auto;
+      }
+      @media screen and (min-width: 360px) and (max-width: 850px) {
+          @include fl-row-sp-c;
+      }
+
+
+  }

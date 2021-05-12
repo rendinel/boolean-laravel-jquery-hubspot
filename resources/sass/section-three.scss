@@ -1,0 +1,126 @@
+.sec-three{
+    min-height: 85rem;
+    background-color: #F5F8FA;
+    width: 100vw;
+    .sec-three-cont{
+        min-height: 85rem;
+        @include col-spa-c;
+        .up{
+            width: 100%;
+            min-height: 20rem;
+            display: flex;
+            @media screen and (min-width: 360px) and (max-width: 767px){
+                @include col-sb-c;
+            }
+            .up-left{
+                width: 40%;
+                min-height: 100%;
+                @include col-jc-c;
+                @media screen and (min-width: 360px) and (max-width: 767px){
+                    align-items: center;
+                }
+                h2{
+                    font-size: 4.5rem;
+                    @media screen and (min-width: 360px) and (max-width: 767px){
+                        margin-top: 2.5rem;
+                    }
+                }
+                p{
+                    font-size: 1.8rem;
+                    width: 32rem;
+                    line-height: 3.6rem;
+                    font-weight: 100;
+                    @media screen and (min-width: 360px) and (max-width: 767px){
+                        text-align: center;
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+            .up-right{
+                width: 60%;
+                height: 20rem;
+                @include wr;
+                @media screen and (min-width: 501px) and (max-width: 767px){
+                    width: 100%;
+                }
+                @media screen and (min-width: 360px) and (max-width: 501px){
+                    min-height: 80rem;
+                }
+                .square{
+                    width: 25%;
+                    height: 50%;
+                    @include col-c-c;
+                    @media screen and (min-width: 360px) and (max-width: 501px){
+                        width: 50%;
+                        height: 25%;
+                    }
+                    img{
+                        width: 60%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+        .down{
+            width: 100%;
+            min-height: 40rem;
+            display: flex;
+            @media screen and (min-width: 360px) and (max-width: 767px){
+                @include col-c-c;
+            }
+            .down-left{
+                width: 60%;
+                height: 100%;
+                @include col-jc-c;
+                @media screen and (min-width: 360px) and (max-width: 767px){
+                    order: 2;
+                }
+                h2{
+                    font-size: 3.5rem;
+                    margin-bottom: 1.5rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                    line-height: 3rem;
+                    width: 75%;
+                }
+                div{
+                    background-color: $color-orange;
+                    color: $color-white;
+                    @include col-c-c;
+                    border-radius: 0.5rem;
+                    width: 20rem;
+                    height: 7.5rem;
+                    font-size: 1.5rem;
+                    margin: 1.5rem 0;
+                    &:hover{
+                        opacity: 0.5;
+                    }
+                }
+                span{
+                    font-size: 1.5rem;
+                    @media screen and (min-width: 360px) and (max-width: 767px){
+                        margin-bottom: 2.5rem;
+                    }
+                }
+            }
+            .down-right{
+                width: 40%;
+                height: 100%;
+                @include col-c-c;
+                @media screen and (min-width: 360px) and (max-width: 767px){
+                    order: 1;
+                }
+                img{
+                    width: 70%;
+                    height: auto;
+                    @media screen and (min-width: 360px) and (max-width: 767px){
+                        height: 25.6rem;
+                        width: 21.4rem;
+                        margin-bottom: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

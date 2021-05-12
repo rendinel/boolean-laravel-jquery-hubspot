@@ -1,0 +1,89 @@
+.hamburger{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: none;
+    overflow-y: hidden;
+    .hamburger-container{
+        background-color: $color-white;
+        width: 100vw;
+        height: 100vh;
+        @include col-c;
+        .nav{
+            height: 6rem;
+            width: 95%;
+            margin-bottom: 2rem;
+            @include  fl-row-sp-c;
+            input{
+                width: 80%;
+                height: 80%;
+                padding: 0.9rem 1rem;
+                color:$color-item-footer;
+                border-radius:3rem;
+                font-size: 1.4rem;
+                border: none;
+                outline: 0;
+                &:focus{
+                box-shadow: 0 0 0 2pt  $color-azzure;
+                }
+            }
+            img{
+                width: 3.65rem;
+                height: 3.65rem;
+            }
+            .x-toggle{
+                font-size: 4rem;
+            }
+        }
+        .rectangle{
+            height: 6rem;
+            width: 95%;
+            border-radius: 0.5rem;
+            background-color: $color-background-section;
+            margin-bottom: 2rem;
+            border: 1px solid $color-item-footer;
+            padding-left: 1rem;
+            @include  fl-row-sp-c;
+            div{
+                font-size: 1.8rem;
+            }
+            span{
+                font-size: 4rem;
+            }
+        }
+        .btn-hamburger{
+            @include btn-orange;
+            width: 95%;
+            height: 6rem;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+        .bottom-burger{
+            @include row-c-c;
+            height: 6rem;
+            width: 95%;
+            margin-bottom: 2rem;
+            .bottom-burger-inside{
+                @include fl-row-sp-c;
+                margin:0 2rem;
+                div{
+                    font-size: 1.4rem;
+                    &:hover{
+                        @include underline;
+                    }
+                }
+            }
+            .bottom-burger-inside:nth-child(2){
+                border-right: 0.1rem solid $color-item-footer;
+                padding-right: 4rem;
+            }
+        }
+    }
+    @media screen and (min-width: 360px) and (max-width: 850px) {
+        display: none;
+    }
+}

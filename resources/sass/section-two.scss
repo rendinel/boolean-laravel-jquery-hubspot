@@ -1,0 +1,80 @@
+.section-two{
+    width: 100%;
+    min-height: 90rem;
+    background-color: #00ABB6;
+    @include col-c-c;
+    .cont-sec-two{
+        @include col-c-c;
+        h2{
+            color: $color-white;
+            font-size: 3.5rem;
+            width: 60% ;
+            text-align: center;
+            line-height: 6rem;
+            @media screen and (min-width: 768px) and (max-width: 1200px){
+                margin-top: 5rem;
+                width: 75vw;
+            }
+            @media screen and (min-width: 360px) and (max-width: 767px){
+                font-size: 2.4rem;
+                width: 90vw;
+                line-height: 3rem;
+                margin: 2.5rem 0;
+            }
+        }
+        p{
+            color: $color-white;
+            font-size: 1.8rem;
+            text-align: center;
+            width: 60%;
+            line-height: 3rem;
+            @media screen and (min-width: 360px) and (max-width: 767px){
+                width: 90vw;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1200px){
+                width: 75vw;
+            }
+        }
+        .table{
+            min-height: 39rem;
+            margin-top: 10rem;
+            @include wr-c-c;
+            @media screen and (min-width: 360px) and (max-width: 1200px) {
+                @include col-c-c-now;
+                margin-top: 2.5rem;
+            }
+            div:nth-child(1),div:nth-child(2),div:nth-child(3),div:nth-child(5),div:nth-child(6),div:nth-child(7){
+                border-right: 0.1rem solid white;
+                @media screen and (min-width: 360px) and (max-width: 1200px){
+                    border: none;
+                }
+            }
+            div:nth-child(1),div:nth-child(2),div:nth-child(3),div:nth-child(4){
+                border-bottom: 0.1rem solid white;
+                @media screen and (min-width: 360px) and (max-width: 1200px){
+                    border: none;
+                }
+            }
+            div:nth-child(5){
+                img{
+                    width: 60%;
+                    height: auto;
+                }
+            }
+            .square{
+                width: 27.5rem;
+                height: 19.5rem;
+                @include col-c-c;
+                h4{
+                    font-size: 4.5rem;
+                    margin: 1rem 0;
+                    color: $color-white;
+                }
+                .table-txt{
+                    font-size: 1.8rem;
+                    color: $color-white;
+                }
+            }
+        }
+    }
+}
